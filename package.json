@@ -1,0 +1,21 @@
+{
+  "name": "profilelog",
+  "version": "1.0.0",
+  "description": "Simple profiling class featuring ellapsed timestamp logging and accumulated stats for repeated bits of code.",
+  "files": [
+    "bin"
+  ],
+  "main": "bin/profilelog.js",
+  "scripts": {
+    "build": "npm install && npm run transpile",
+    "transpile": "babel --presets es2015 --plugins async-to-promises src --out-dir bin",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-async-to-promises": "^1.0.5",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "author": "git@danlynn.org",
+  "license": "MIT"
+}
