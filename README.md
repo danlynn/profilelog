@@ -14,7 +14,6 @@ This will pull the code from this git repo and install it into your project's no
 
 ```JSON
 "dependencies": {
-  ...
   "profilelog": "danlynn/profilelog"
 }
 ```
@@ -78,7 +77,7 @@ const profileLog = new ProfileLog('Heading')
 
 This means that you can just as easily create multiple instances and add profiling entries into each as desired.  The argument passed to the constructor lets you provide a meaningful heading when the profile log is later output.
 
-## Example outout
+## Example output
 
 In this example, the performance of a system which generate email content is tested by simulating the creation of 4 emails with 6 images each.
 
