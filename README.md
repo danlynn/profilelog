@@ -121,15 +121,15 @@ Dynamic Email Generator:
 
   images:
     count: 24
-    min:   4121
-    max:   5734
-    ave:   4916
+    min:   327
+    max:   8927
+    ave:   1944
 
   emails:
     count: 4
-    min:   4173
-    max:   5740
-    ave:   5072
+    min:   485
+    max:   8931
+    ave:   2719
 ```
 
 From this output, it looks something about email 3 triggered additional processing and delay.  Perhaps, that warrants additional inspection?
