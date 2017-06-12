@@ -72,9 +72,11 @@ export default class ProfileLog {
    * @param group {string} group name
    */
   addToGroup(since, group) {
-    if (!this.groups[group])
-      this.groups[group] = []
-    this.groups[group].push(Date.now() - since)
+    if (this.enabled) {
+      if (!this.groups[group])
+        this.groups[group] = []
+      this.groups[group].push(Date.now() - since)
+    }
   }
 
   /**
