@@ -1,6 +1,6 @@
 {
   "name": "profilelog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple profiling class featuring ellapsed timestamp logging and accumulated stats for repeated bits of code.",
   "files": [
     "bin"
