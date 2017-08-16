@@ -10,11 +10,17 @@ ProfileLog can be installed into your project's `package.json` via:
 $ npm install 'danlynn/profilelog' --save
 ```
 
+...or if you want a specific tagged version:
+
+```bash
+$ npm install 'danlynn/profilelog#1.0.2' --save
+```
+
 This will pull the code from this git repo and install it into your project's node_modules directory.  Your `package.json` file's dependencies will be updated with:
 
 ```JSON
 "dependencies": {
-  "profilelog": "danlynn/profilelog"
+  "profilelog": "danlynn/profilelog#1.0.2"
 }
 ```
 

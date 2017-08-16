@@ -3,8 +3,16 @@
 /**
  * Simple profile logging utility
  *
- * usage:
- *   const ProfileLog = require('./profilelog')
+ * add to package.json:
+ *   "dependencies": {
+ *     "profilelog": "danlynn/profilelog"
+ *   }
+ *
+ * ES6 usage:
+ *   import ProfileLog from 'profilelog'
+ *
+ * ES5 usage:
+ *   const ProfileLog = require('profilelog').default
  *   profileLog = new ProfileLog('Test Performance')
  *   let start = Date.now()
  *   ...do something being measured...
@@ -12,6 +20,12 @@
  *   start = Date.now()
  *   ...do something being measured again...
  *   profileLog.addEntry(start, 'Did something slow again')
+ *   start = Date.now()
+ *   for (let url in urls) {
+ *     fetch(url).then((response) => {
+ *       profileLog.addToGroup(start, 'images')
+ *     })
+ *   }
  *   profileLog.writeToConsole()
  *
  * output:
@@ -81,8 +95,10 @@ var ProfileLog = function () {
   }, {
     key: 'addToGroup',
     value: function addToGroup(since, group) {
-      if (!this.groups[group]) this.groups[group] = [];
-      this.groups[group].push(Date.now() - since);
+      if (this.enabled) {
+        if (!this.groups[group]) this.groups[group] = [];
+        this.groups[group].push(Date.now() - since);
+      }
     }
 
     /**
